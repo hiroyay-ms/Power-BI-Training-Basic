@@ -5,7 +5,7 @@
 <br />
 
 ### **INDEX**
-- [CSV ファイルからデータを取得](#CSV-ファイルからデータを取得)
+- [Excel ファイルからデータを取得](#Excel-ファイルからデータを取得)
 
 - [Power BI ビジュアルの追加](#Power-BI-ビジュアルの追加)
 
@@ -17,13 +17,13 @@
 
 <br />
 
-### **CSV ファイルからデータを取得**
+### **Excel ファイルからデータを取得**
 
 - Power BI Desktop を起動
 
-- **データを取得** - **テキスト/CSV** をクリック
+- **データを取得** - **Excel ブック** をクリック
 
-  <img src="images/get-data-from-text.png" />
+  <img src="images/get-data-from-excel.png" />
 
 - **reviews.xlsx** を選択し **開く** をクリック
 
