@@ -380,3 +380,142 @@
 
   <img src="images/create-new-page-03.png" />
 
+- **書式**（<img src="images/icon-Format.png" width="15" />）をクリック
+
+- **項目** を展開し、**フォントの色**、**背景** を任意の色に設定
+
+  <img src="images/create-new-page-04.png" />
+
+  <img src="images/create-new-page-05.png" />
+
+  ※ 例：フォントの色：白、背景：テーマの色 2（#12239E）に設定
+
+  - **表示** タブの **テーマ** から全体のデザインを変更することも可
+
+    <img src="images/create-new-page-06.png" />
+
+- **視覚化** の **カード** をクリックし、レポートへ配置
+
+  <img src="images/card-01.png" />
+
+- **フィールド** に **newly_confirmed_cases_daily** の **Total** をドラッグ＆ドロップ
+
+  <img src="images/card-02.png" />
+
+- **書式**（<img src="images/icon-Format.png" width="15" />）をクリック
+
+- **データ ラベル** を展開し、**表示単位** を **なし** に設定
+
+  <img src="images/card-03.png" />
+
+- 大きさを調整し、スライサーの右に配置
+
+  <img src="images/card-04.png" />
+
+- **視覚化** の **マップ** をクリックし、レポートへ配置
+
+  <img src="images/map-01.png" />
+
+- **場所** と **サイズ** にフィールドをドラッグ＆ドロップ
+
+  場所： **都道府県マスタ** - **都道府県区分**
+
+  サイズ： **newly_confirmed_cases_daily** - **Total**
+
+  <img src="images/map-02.png" />
+
+- **書式**（<img src="images/icon-Format.png" width="15" />）をクリック
+
+- **データの色** を展開し、任意の色に設定
+
+  <img src="images/map-03.png" />
+
+  ※ テーマの色 5（#E044A7）に設定
+
+- 大きさを調整し、スライサーの下に配置
+
+  <img src="images/map-04.png" />
+
+- **視覚化** の **積み上げ面グラフ** をクリックし、レポートへ配置
+
+  <img src="images/area-chart-01.png" />
+
+- **軸**、**凡例**、**値** にフィールドをドラッグ＆ドロップ
+
+  **軸**： **日付マスタ** - **月**
+
+  **凡例**： **日付マスタ** - **年**
+
+  **値**： **newly_confirmed_cases_daily** - **Total**
+
+  <img src="images/area-chart-02.png" />
+
+- 積み上げ面グラフの左上にある **...** をクリック
+
+  **軸の並べ替え** をクリックし **月** を選択
+
+  <img src="images/area-chart-03.png" />
+
+- 同様の手順で **軸の並べ替え** をクリックし **昇順で並べ替え** を選択
+
+- 大きさを調整しマップの横に配置
+
+  <img src="images/area-chart-04.png" />
+
+- **視覚化** の **積み上げ法グラフ** をクリックして、レポートへ配置
+
+  <img src="images/column-chart-01.png" />
+
+- **軸**、**値** にフィールドをドラッグ＆ドロップ
+
+  **軸**： **日付マスタ** - **曜日**
+
+  **値**： **newly_confirmed_cases_daily** - **Total**
+
+  <img src="images/column-chart-02.png" />
+
+- 大きさを調整し、カードの下に配置
+
+  <img src="images/column-chart-03.png" />
+
+- **視覚化** の **マトリックス** をクリックして、レポートへ配置
+
+  <img src="images/matrix-01.png" />
+
+- **行**、**列**、**値** にフィールドをドラッグ＆ドロップ
+
+  **行**： **日付マスタ** - **月**
+
+  **列**： **日付マスタ** - **年**
+
+  **値**： ****newly_confirmed_cases_daily** - **Total**, **MoM%**
+
+  <img src="images/matrix-02.png" />
+
+- **書式**（<img src="images/icon-Format.png" width="15" />）をクリック
+
+- **小計** を展開し、**行の小計**、**列の小計** を **オフ** に設定
+
+  <img src="images/matrix-03.png" />
+
+- **条件付き書式** を展開
+
+  **Total** を選択し **背景色** を **オン** に設定
+
+  <img src="images/matrix-04.png" />
+
+- 同様の手順で **MoM%** の **背景色** を **オン** に設定
+
+  <img src="images/matrix-05.png" />
+
+- 大きさを調整し、積み上げ縦棒グラフの下に配置
+
+  <img src="images/matrix-06.png" />
+
+- スライサーで任意の項目を選択
+
+  マップ、グラフ、マトリックスにフィルター処理が適用されることを確認
+
+  <img src="images/matrix-07.png" />
+
+- ファイル メニューで名前を付けて保存を実行し、終了
