@@ -328,6 +328,12 @@
   Total = SUM('newly_confirmed_cases_daily'[Newly confirmed cases])
   ```
 
+- 再度 **新しいメジャー** をクリックし、前月比を算出する **MoM%** メジャーを作成
+
+  ```
+  MoM% = DIVIDE('newly_confirmed_cases_daily'[Total], CALCULATE('newly_confirmed_cases_daily'[Total], DATEADD('日付マスタ'[Date], -1, MONTH))) - 1
+  ```
+
 - **書式設定** で **,（カンマ）** をクリック
 
   <img src="images/create-calendar-15.png" />
@@ -488,7 +494,7 @@
 
   **列**： **日付マスタ** - **年**
 
-  **値**： ****newly_confirmed_cases_daily** - **Total**, **MoM%**
+  **値**： **newly_confirmed_cases_daily** - **Total**, **MoM%**
 
   <img src="images/matrix-02.png" />
 
