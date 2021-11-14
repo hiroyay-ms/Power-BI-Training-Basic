@@ -18,6 +18,10 @@
 
 - [レポート作成 (3)](#レポート作成-(3))
 
+- [テーブルの追加](#テーブルの追加)
+
+- [レポートの作成 (4)](#レポートの作成-(4))
+
 <br />
 
 ### **CSV ファイルからデータを読み込み**
@@ -274,6 +278,170 @@
 
   <img src="images/create-measure-24.png" />
 
-- マトリックス上のフィールドをクリックすると、レポート上の各視覚化コンポーネントにフィルターが適用
+-  テーブルをクリックして選択
+
+- **視覚化** の **複数の行カード** をクリック
+
+  <img src="images/multi-card-01.png" />
+
+- テーブルからカードへ変更
 
   <img src="images/create-measure-25.png" />
+
+- マトリックス上のフィールドをクリックすると、レポート上の各視覚化コンポーネントにフィルターが適用
+
+  <img src="images/create-measure-26.png" />
+
+<br />
+
+### **テーブルの追加**
+
+- **ホーム** タブの **データの変換** をクリック
+
+  <img src="images/edit-data-01.png" />
+
+- Power Query エディターが起動
+
+- **新しいソース** をクリックし **Excel ブック** を選択
+
+  <img src="images/get-data-from-text-2.png" />
+
+- **売上データ.csv** を選択し **開く** をクリック
+
+- **元のファイル**、**区切り記号**、**データ型の検出** を確認し、**OK** をクリック
+
+  - **元のファイル**： **65001: Unicode (UTF-8)**
+
+  - **区切り記号**： コンマ
+
+  - **データ型の検出**： 最初の 200 行に基づく
+
+    <img src="images/get-sales-data-01.png" />
+
+- 同様の操作で **商品.csv** へ接続
+
+  - **元のファイル**： **65001: Unicode (UTF-8)**
+
+  - **区切り記号**： コンマ
+
+  - **データ型検出**： 最初の 200 行に基づく
+
+    <img src="images/get-product-data.png" />
+
+- ** ホーム** タブの **閉じて適用** をクリック
+
+  レポートへデータを読み込み
+
+- 画面左の **モデル**（<img src="images/icon-Model.png" width="15" />）をクリック
+
+- **売上データ** と **顧客**, **商品** テーブルが関連付けられていることを確認
+
+  <img src="images/model-sales-01.png" />
+
+  ※同名の列がある場合は、自動的にリレーション シップを作成
+
+- 画面左の **データ**（<img src="images/icon-Table.png" width="15" />）をクリック
+
+- 画面左のフィールドで **売上データ** - **売上** を選択
+
+  <img src="images/model-sales-02.png" />
+
+- **書式** を **通貨** に変更 
+
+  <img src="images/model-sales-03.png" />
+
+- ＄ 左の矢印をクリックし **￥ 日本語 (日本)** を選択
+
+  <img src="images/model-sales-04.png" />
+
+- **テーブル ツール** タブを選択し、**新しいメジャー** をクリック
+
+  <img src="images/model-sales-06.png" />
+
+- SUM 関数を使用し売上合計のメジャーを作成
+
+  ```
+  売上合計 = SUM('売上データ'[売上]) 
+  ```
+
+- **書式** を **通貨** に設、**通貨単位** を **￥ 日本語 (日本)** に設定
+
+  <img src="images/model-sales-07.png" />
+
+- 同様の手順で **数量** メジャーを作成
+
+  ```
+  数量 = COUNTROWS('売上データ') 
+  ```
+
+- 書式設定で **,** をクリックし、３桁区切り記号のコンマをつけて表示するよう設定
+
+  <img src="images/model-sales-08.png" />
+
+<br />
+
+### **レポートの作成 (4)**
+
+- 画面左の **レポート**（<img src="images/icon-Report.png" width="15" />）をクリック
+
+- 画面したの「＋」をクリックし、ページを追加
+
+  <img src="images/create-new-page-01.png" />
+
+- **視覚化** の **カード** をクリックし、レポートへ配置
+
+  <img src="images/card-01.png" />
+
+- **フィールド** へ **売上データ** - **売上合計** をドラッグ＆ドロップ
+
+  <img src="images/report-4-01.png" />
+
+- **書式**（<img src="images/icon-Format.png" width="15" />）をクリック
+
+- **データ ラベル** を展開し **表示単位** を **千** に設定
+
+  <img src="images/report-4-02.png" />
+
+- **視覚化** の **カード** をクリックし、レポートへ配置
+
+- **フィールド** へ **売上データ** - **数量** をドラッグ＆ドロップ
+
+  <img src="images/report-4-03.png" />
+
+- **書式**（<img src="images/icon-Format.png" width="15" />）をクリック
+
+- **データ ラベル** を展開し **表示単位** を **なし** に設定
+
+  <img src="images/report-4-04.png" />
+
+- 大きさを調整し、画面左上に並べて表示
+
+  <img src="images/report-4-05.png" />
+
+- 視覚化の **スライサー** をクリックして配置
+
+  <img src="images/create-slicer-01.png" />
+
+- フィールドに **商品** の **カテゴリ** をドラッグ＆ドロップ
+
+  <img src="images/report-4-06.png" />
+
+- **全般** を展開し **方向** を **横** に設定
+
+  <img src="images/create-slicer-03.png" />
+
+- 大きさを調整し、カードの左側に配置
+
+  <img src="images/report-4-07.png" />
+
+- 視覚化の **スライサー** をクリックして配置
+
+  <img src="images/create-slicer-01.png" />
+
+- フィールドに **売上データ** の **日付の階層** - **年** をドラッグ＆ドロップ
+
+  <img src="images/report-4-08.png" />
+
+- 大きさを調整し、先の手順で作成したスライサーの左に配置
+
+  <img src="images/report-4-09.png" />
