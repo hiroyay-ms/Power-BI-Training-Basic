@@ -445,3 +445,77 @@
 - 大きさを調整し、先の手順で作成したスライサーの左に配置
 
   <img src="images/report-4-09.png" />
+
+- **視覚化** の **リボン グラフ** をクリックしてレポートに配置
+
+  <img src="images/report-4-ribbon-01.png" />
+
+- **軸**、**凡例**、**値** にフィールドをドラッグ＆ドロップ
+
+  - **軸**： **売上データ** - **日付** - **日付の階層** の **年**, **月**
+
+  - **凡例**： **商品** の **種類**
+
+  - **値**： **売上データ** の **売上合計**
+
+  <img src="images/report-4-ribbon-02.png" />
+
+- レポート上のリボン グラフを選択し「<img src="images/icon-DrillDown.png" width="15" />」をクリック
+
+  <img src="images/report-4-ribbon-03.png" />
+
+- 行の階層を月までドリルダウンして表示
+
+  <img src="images/report-4-ribbon-04.png" />
+
+- **視覚化** の **ドーナツ グラフ** をクリックしてレポートに配置
+
+  <img src="images/report-4-donuts-01.png" />
+
+- **凡例** に **商品** - **購買層**、**値** に **売上データ** - **売上合計** をドラッグ＆ドロップ
+
+  <img src="images/report-4-donuts-02.png" />
+
+- 大きさを調整し、リボン グラフの左側に配置
+
+  <img src="images/report-4-donuts-03.png" />
+
+- **視覚化** の **ドーナツ グラフ** をクリックしてレポートに配置
+
+  <img src="images/report-4-donuts-01.png" />
+
+- **凡例** に **顧客** - **年代**、**値** に **売上データ** - **売上合計** をドラッグ＆ドロップ
+
+  <img src="images/report-4-donuts-04.png" />
+
+- 大きさを調整し、先ほど作成したドーナツ グラフの左側へ配置
+
+  <img src="images/report-4-donuts-05.png" />
+
+- **視覚化** の **テーブル** をクリック
+
+  <img src="images/get-customer-03.png" />
+
+- **値** に **顧客名**, **性別**, **学歴**, **年代** フィールドをドラッグ＆ドロップ
+
+  <img src="images/report-4-table-01.png" />
+
+- レポート上のテーブルを選択
+
+  **...** をクリックし **並べ替え** - **売上合計** を選択
+
+  <img src="images/report-4-table-02.png" />
+
+  ※売上合計の降順でデータを並べ替え
+
+- 完成
+
+  <img src="images/report-4-table-03.png" />
+
+- カテゴリ、年 のスライサーでデータをフィルタリングして表示
+
+  <img src="images/report-4-10.png" />
+
+  <img src="images/report-4-11.png" />
+
+- **ファイル** メニューの **名前を付けて保存** を実行し終了
